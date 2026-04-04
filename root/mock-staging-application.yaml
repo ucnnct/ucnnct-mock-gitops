@@ -12,7 +12,7 @@ spec:
     targetRevision: main
     path: apps/overlay/staging
   destination:
-    server: https://kubernetes.default.svc
+    server: https://172.31.253.146:6443
     namespace: ucnnct-mock
   syncPolicy:
     automated:
