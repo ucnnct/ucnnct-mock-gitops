@@ -22,6 +22,11 @@ spec:
         - name: mock-user-service
           image: ghcr.io/ucnnct/mock-user-service:0.1.0
           imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: mock-user-service-config
+            - secretRef:
+                name: mock-user-service-secrets
           env:
             - name: SERVER_PORT
               value: "7500"

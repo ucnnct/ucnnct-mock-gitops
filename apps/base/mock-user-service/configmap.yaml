@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mock-user-service-config
+  labels:
+    app.kubernetes.io/name: mock-user-service
+    app.kubernetes.io/part-of: ucnnct-mock
+data:
+  STAGING_IDENTITY_PROVISION_ENABLED: "true"
+  STAGING_IDENTITY_BASE_URL: "https://auth-staging.uconnect.cc"
+  STAGING_IDENTITY_REALM: "ucnnct"
+  STAGING_IDENTITY_ADMIN_CLIENT_ID: "admin-cli"
+  STAGING_IDENTITY_ADMIN_USERNAME: "admin"
+  STAGING_IDENTITY_CLIENT_ID: "ucnnct-bff"
+  STAGING_IDENTITY_TARGET_BASE_URL: "https://staging.uconnect.cc"
+  STAGING_IDENTITY_USERNAME_PREFIX: "mock.staging"
+  MOCK_USERS_INITIAL_COUNT: "64"
+  MOCK_USERS_EXPANSION_BUFFER: "24"
