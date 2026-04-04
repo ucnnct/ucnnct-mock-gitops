@@ -4,4 +4,5 @@ resources:
   - ../../../base/mock-control-center
 images:
   - name: ghcr.io/ucnnct/mock-control-center
-    newTag: 0.1.0
+    newTag: 0.1.1
+    newName: ghcr.io/ucnnct/mock-control-center
