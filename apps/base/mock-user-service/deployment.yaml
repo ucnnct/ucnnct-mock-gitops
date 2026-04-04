@@ -16,6 +16,8 @@ spec:
         app.kubernetes.io/name: mock-user-service
         app.kubernetes.io/part-of: ucnnct-mock
     spec:
+      imagePullSecrets:
+        - name: ghcr-credentials
       containers:
         - name: mock-user-service
           image: ghcr.io/ucnnct/mock-user-service:0.1.0

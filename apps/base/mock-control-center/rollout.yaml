@@ -17,6 +17,8 @@ spec:
         app.kubernetes.io/name: mock-control-center
         app.kubernetes.io/part-of: ucnnct-mock
     spec:
+      imagePullSecrets:
+        - name: ghcr-credentials
       containers:
         - name: mock-control-center
           image: ghcr.io/ucnnct/mock-control-center:0.0.0

@@ -16,6 +16,8 @@ spec:
         app.kubernetes.io/name: orchestrator
         app.kubernetes.io/part-of: ucnnct-mock
     spec:
+      imagePullSecrets:
+        - name: ghcr-credentials
       containers:
         - name: orchestrator
           image: ghcr.io/ucnnct/mock-orchestrator:0.1.0

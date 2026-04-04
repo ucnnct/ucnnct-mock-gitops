@@ -1,16 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ucnnct-mock-staging-image-updater
+  name: ucnnct-mock-root
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "2"
 spec:
   project: default
   source:
     repoURL: https://github.com/ucnnct/ucnnct-mock-gitops.git
     targetRevision: main
-    path: platform/updater/staging
+    path: root
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
@@ -18,5 +16,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
