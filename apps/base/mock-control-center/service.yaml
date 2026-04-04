@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mock-control-center
+  labels:
+    app.kubernetes.io/name: mock-control-center
+    app.kubernetes.io/part-of: ucnnct-mock
+spec:
+  selector:
+    app.kubernetes.io/name: mock-control-center
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
