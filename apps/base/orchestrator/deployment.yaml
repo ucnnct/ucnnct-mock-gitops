@@ -34,6 +34,8 @@ spec:
               value: ucnnct-mock
             - name: WORKER_DEPLOYMENT_NAME
               value: worker-service
+            - name: WORKER_HPA_NAME
+              value: worker-service
             - name: WORKER_LABEL_SELECTOR
               value: app.kubernetes.io/name=worker-service
             - name: WORKER_SHARD_SIZE
