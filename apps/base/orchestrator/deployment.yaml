@@ -16,6 +16,7 @@ spec:
         app.kubernetes.io/name: orchestrator
         app.kubernetes.io/part-of: ucnnct-mock
     spec:
+      serviceAccountName: orchestrator
       imagePullSecrets:
         - name: ghcr-credentials
       containers:
@@ -29,6 +30,22 @@ spec:
               value: http://worker-service:7400
             - name: MOCK_USER_SERVICE_ORIGIN
               value: http://mock-user-service:7500
+            - name: K8S_NAMESPACE
+              value: ucnnct-mock
+            - name: WORKER_DEPLOYMENT_NAME
+              value: worker-service
+            - name: WORKER_LABEL_SELECTOR
+              value: app.kubernetes.io/name=worker-service
+            - name: WORKER_SHARD_SIZE
+              value: "250"
+            - name: IDENTITY_REUSE_FACTOR
+              value: "25"
+            - name: WORKER_MIN_REPLICAS
+              value: "2"
+            - name: WORKER_MAX_REPLICAS
+              value: "40"
+            - name: MAX_VIRTUAL_USERS
+              value: "10000"
           ports:
             - name: http
               containerPort: 7300
@@ -46,8 +63,8 @@ spec:
             periodSeconds: 20
           resources:
             requests:
-              cpu: 50m
-              memory: 128Mi
+              cpu: 100m
+              memory: 192Mi
             limits:
-              cpu: 300m
-              memory: 256Mi
+              cpu: 500m
+              memory: 512Mi
