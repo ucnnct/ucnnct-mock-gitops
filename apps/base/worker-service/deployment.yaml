@@ -6,7 +6,6 @@ metadata:
     app.kubernetes.io/name: worker-service
     app.kubernetes.io/part-of: ucnnct-mock
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: worker-service
@@ -18,13 +17,6 @@ spec:
     spec:
       imagePullSecrets:
         - name: ghcr-credentials
-      nodeSelector:
-        workload: mock-workers
-      tolerations:
-        - key: dedicated
-          operator: Equal
-          value: mock-workers
-          effect: NoSchedule
       topologySpreadConstraints:
         - maxSkew: 1
           topologyKey: kubernetes.io/hostname
