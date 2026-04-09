@@ -39,13 +39,13 @@ spec:
             - name: WORKER_LABEL_SELECTOR
               value: app.kubernetes.io/name=worker-service
             - name: WORKER_SHARD_SIZE
-              value: "250"
+              value: "200"
             - name: IDENTITY_REUSE_FACTOR
               value: "25"
             - name: WORKER_MIN_REPLICAS
               value: "2"
             - name: WORKER_MAX_REPLICAS
-              value: "40"
+              value: "50"
             - name: MAX_VIRTUAL_USERS
               value: "10000"
           ports:

@@ -11,7 +11,7 @@ spec:
     kind: Deployment
     name: worker-service
   minReplicas: 2
-  maxReplicas: 40
+  maxReplicas: 50
   metrics:
     - type: Resource
       resource:
