@@ -12,6 +12,8 @@ spec:
       app.kubernetes.io/name: mock-user-service
   template:
     metadata:
+      annotations:
+        mock.uconnect.cc/config-revision: "2026-04-17-identity-warmup-v2"
       labels:
         app.kubernetes.io/name: mock-user-service
         app.kubernetes.io/part-of: ucnnct-mock
