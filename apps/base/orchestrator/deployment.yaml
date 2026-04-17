@@ -40,8 +40,6 @@ spec:
               value: app.kubernetes.io/name=worker-service
             - name: WORKER_SHARD_SIZE
               value: "200"
-            - name: IDENTITY_REUSE_FACTOR
-              value: "25"
             - name: WORKER_MIN_REPLICAS
               value: "2"
             - name: WORKER_MAX_REPLICAS
