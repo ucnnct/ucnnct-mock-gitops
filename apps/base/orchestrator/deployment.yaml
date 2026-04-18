@@ -39,11 +39,11 @@ spec:
             - name: WORKER_LABEL_SELECTOR
               value: app.kubernetes.io/name=worker-service
             - name: WORKER_SHARD_SIZE
-              value: "200"
+              value: "100"
             - name: WORKER_MIN_REPLICAS
               value: "2"
             - name: WORKER_MAX_REPLICAS
-              value: "50"
+              value: "100"
             - name: MAX_VIRTUAL_USERS
               value: "10000"
             - name: STAGING_CLUSTER_NAMESPACE
