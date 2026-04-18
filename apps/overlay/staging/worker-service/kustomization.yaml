@@ -4,5 +4,5 @@ resources:
   - ../../../base/worker-service
 images:
   - name: ghcr.io/ucnnct/mock-worker-service
-    newTag: 0.11.3
+    newTag: 0.11.4
     newName: ghcr.io/ucnnct/mock-worker-service
