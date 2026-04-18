@@ -32,6 +32,10 @@ spec:
           env:
             - name: SERVER_PORT
               value: "7500"
+            - name: STAGING_IDENTITY_TRANSPORT_URL
+              value: "http://172.31.255.240"
+            - name: STAGING_IDENTITY_HOST_HEADER
+              value: "auth-staging.uconnect.cc"
           ports:
             - name: http
               containerPort: 7500
