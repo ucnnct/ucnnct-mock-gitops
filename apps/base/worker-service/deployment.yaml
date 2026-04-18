@@ -38,6 +38,8 @@ spec:
               value: "7400"
             - name: WORKER_TICK_MS
               value: "500"
+            - name: BROWSER_AUTH_CONCURRENCY
+              value: "12"
             - name: WS_BOOTSTRAP_CONCURRENCY
               value: "32"
           ports:
