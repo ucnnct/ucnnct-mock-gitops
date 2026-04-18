@@ -38,10 +38,6 @@ spec:
               value: "7400"
             - name: WORKER_TICK_MS
               value: "500"
-            - name: STAGING_IDENTITY_TRANSPORT_URL
-              value: "http://172.31.255.240"
-            - name: STAGING_IDENTITY_HOST_HEADER
-              value: "auth-staging.uconnect.cc"
           ports:
             - name: http
               containerPort: 7400
