@@ -39,9 +39,9 @@ spec:
             - name: WORKER_TICK_MS
               value: "500"
             - name: BROWSER_AUTH_CONCURRENCY
-              value: "12"
+              value: "4"
             - name: WS_BOOTSTRAP_CONCURRENCY
-              value: "32"
+              value: "12"
           ports:
             - name: http
               containerPort: 7400
