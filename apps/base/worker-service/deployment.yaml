@@ -38,6 +38,8 @@ spec:
               value: "7400"
             - name: WORKER_TICK_MS
               value: "500"
+            - name: WS_BOOTSTRAP_CONCURRENCY
+              value: "2"
           ports:
             - name: http
               containerPort: 7400
