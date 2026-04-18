@@ -28,6 +28,11 @@ spec:
         - name: worker-service
           image: ghcr.io/ucnnct/mock-worker-service:0.1.0
           imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: mock-user-service-config
+            - secretRef:
+                name: mock-user-service-secrets
           env:
             - name: PORT
               value: "7400"
