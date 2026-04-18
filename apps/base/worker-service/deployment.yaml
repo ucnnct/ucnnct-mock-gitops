@@ -33,6 +33,9 @@ spec:
                 name: mock-user-service-config
             - secretRef:
                 name: mock-user-service-secrets
+            - secretRef:
+                name: staging-auth-bootstrap
+                optional: true
           env:
             - name: PORT
               value: "7400"
@@ -42,6 +45,8 @@ spec:
               value: "4"
             - name: WS_BOOTSTRAP_CONCURRENCY
               value: "12"
+            - name: STAGING_AUTH_BOOTSTRAP_MODE
+              value: "redis-session"
           ports:
             - name: http
               containerPort: 7400
