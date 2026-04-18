@@ -4,5 +4,5 @@ resources:
   - ../../../base/orchestrator
 images:
   - name: ghcr.io/ucnnct/mock-orchestrator
-    newTag: 0.11.2
+    newTag: 0.11.3
     newName: ghcr.io/ucnnct/mock-orchestrator
