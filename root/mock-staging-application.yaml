@@ -15,6 +15,12 @@ spec:
       jsonPointers:
         - /spec/minReplicas
         - /spec/maxReplicas
+    - group: apps
+      kind: Deployment
+      name: worker-service
+      namespace: ucnnct-mock
+      jsonPointers:
+        - /spec/replicas
   source:
     repoURL: https://github.com/ucnnct/ucnnct-mock-gitops.git
     targetRevision: main
@@ -28,3 +34,4 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - RespectIgnoreDifferences=true
