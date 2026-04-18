@@ -42,9 +42,9 @@ spec:
             - name: WORKER_TICK_MS
               value: "500"
             - name: BROWSER_AUTH_CONCURRENCY
-              value: "4"
+              value: "24"
             - name: WS_BOOTSTRAP_CONCURRENCY
-              value: "12"
+              value: "48"
             - name: STAGING_AUTH_BOOTSTRAP_MODE
               value: "redis-session"
           ports:
