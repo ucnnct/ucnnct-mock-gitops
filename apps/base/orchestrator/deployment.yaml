@@ -46,6 +46,26 @@ spec:
               value: "50"
             - name: MAX_VIRTUAL_USERS
               value: "10000"
+            - name: STAGING_CLUSTER_NAMESPACE
+              value: staging
+            - name: STAGING_CLUSTER_API_URL
+              valueFrom:
+                secretKeyRef:
+                  name: staging-cluster-reader
+                  key: server
+                  optional: true
+            - name: STAGING_CLUSTER_CA_BASE64
+              valueFrom:
+                secretKeyRef:
+                  name: staging-cluster-reader
+                  key: ca.crt
+                  optional: true
+            - name: STAGING_CLUSTER_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: staging-cluster-reader
+                  key: token
+                  optional: true
           ports:
             - name: http
               containerPort: 7300
