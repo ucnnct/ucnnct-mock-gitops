@@ -10,7 +10,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: worker-service
-  minReplicas: 2
+  minReplicas: 100
   maxReplicas: 100
   metrics:
     - type: Resource
@@ -31,13 +31,13 @@ spec:
       selectPolicy: Max
       policies:
         - type: Percent
-          value: 100
-          periodSeconds: 60
+          value: 500
+          periodSeconds: 30
         - type: Pods
-          value: 8
-          periodSeconds: 60
+          value: 100
+          periodSeconds: 30
     scaleDown:
-      stabilizationWindowSeconds: 180
+      stabilizationWindowSeconds: 1800
       selectPolicy: Min
       policies:
         - type: Percent
