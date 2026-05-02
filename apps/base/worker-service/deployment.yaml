@@ -48,7 +48,7 @@ spec:
             - name: STAGING_AUTH_BOOTSTRAP_MODE
               value: "redis-session"
             - name: WS_MANAGER_DIRECT_URLS
-              value: "ws://172.31.253.170:32081/ws/uconnect,ws://172.31.249.27:32081/ws/uconnect,ws://172.31.253.199:32081/ws/uconnect,ws://172.31.249.200:32081/ws/uconnect,ws://172.31.249.152:32081/ws/uconnect,ws://172.31.249.164:32081/ws/uconnect"
+              value: "ws://172.31.253.170:32081/ws/uconnect,ws://172.31.249.27:32081/ws/uconnect,ws://172.31.253.199:32081/ws/uconnect,ws://172.31.249.200:32081/ws/uconnect,ws://172.31.249.164:32081/ws/uconnect"
             - name: WS_RELAY_SHARED_SECRET
               valueFrom:
                 secretKeyRef:
