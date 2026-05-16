@@ -4,5 +4,5 @@ resources:
   - ../../../base/mock-user-service
 images:
   - name: ghcr.io/ucnnct/mock-user-service
-    newTag: 0.6.7
+    newTag: 0.6.8
     newName: ghcr.io/ucnnct/mock-user-service
